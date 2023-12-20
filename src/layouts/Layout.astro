@@ -1,0 +1,94 @@
+---
+import Link from "../components/Link.astro";
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="content-container">
+				<a aria-label="Homepage"><img src="/logo.svg" alt="" height="37" width="60"></a>
+				<nav class="site-nav">
+					<ul class="nav-list" aria-label="Main">
+						{["Home", "About", "Our services", "References", "Home", "Careers"].map(item =>  <li class="nav-item"><Link text={item}/></li>)}
+					</ul>
+				</nav>
+			</div>
+
+		</header>
+
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--clr-text: #FFFFFF;
+		--clr-background: #080808;
+		--clr-secondary: #D9323B;
+
+		--ff-base: "IBM Plex Sans", sans-serif;
+		--ff-accent: "Young Serif", serif;
+
+		--fw-regular: 300;
+		--fw-nav: 400;
+		--fw-bold: 500;
+		--fw-black: 700;
+
+		--fs-300: 1rem;
+		--fs-400: 1.5rem;
+		--fs-500: 2.875rem;
+		--fs-600: 4rem;
+		--fs-700: 7.8rem;
+	}
+	* {
+		margin: 0;
+	}
+	body {
+		background: var(--clr-background);
+		color: var(--clr-text);
+		font-family: var(--ff-base);
+	}
+
+	.content-container {
+		max-width: 85vw;
+		width: min(90vw, 85rem);
+		margin-inline: auto;
+	}
+
+	.header {
+		padding: 2.5rem 0;
+	}
+	.header .content-container {
+		display: grid;
+		align-items: center;
+		grid-template-columns: auto 1fr;
+	}
+
+	.site-nav {
+		justify-self: end;
+	}
+
+	.nav-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem 3.125rem;
+		list-style: none;
+	}
+
+	.nav-item {
+
+	}
+</style>

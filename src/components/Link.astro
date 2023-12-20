@@ -1,0 +1,27 @@
+---
+interface Props {
+    text: string;
+}
+
+const { text, hasBtnStyle}= Astro.props;
+---
+
+{hasBtnStyle ? <a class="link link-btn">{text}</a> :  <a class="link">{text}</a> }
+
+<style>
+    .link, .link:visited {
+        color: var(--clr-text);
+        text-decoration: none;
+        font-weight: var(--fw-nav);
+        cursor: pointer;
+    }
+
+    .link-btn {
+        display: inline-block;
+        background: var(--clr-secondary);
+        border-radius: 1.875rem;
+        letter-spacing: 0.2em;
+        padding: 0.5rem 1.625rem;
+        font-weight: var(--fw-black);
+    }
+</style>

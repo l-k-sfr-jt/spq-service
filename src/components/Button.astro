@@ -1,0 +1,22 @@
+---
+interface Props {
+    text: string;
+}
+
+const { text, children }= Astro.props;
+---
+
+<button class="button">
+    {text}
+</button>
+<style>
+    .button {
+        background: var(--clr-secondary);
+        border: none;
+        color: var(--clr-text);
+        border-radius: 1.875rem;
+        letter-spacing: 0.2em;
+        padding: 0.5rem 1.625rem;
+        font-weight: var(--fw-black);
+    }
+</style>
