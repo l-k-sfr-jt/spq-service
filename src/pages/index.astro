@@ -1,14 +1,48 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Button from "../components/Button.astro";
-import Link from "../components/Link.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<Button text="hello" />
-		<Link text="Hey" />
-		<Link text="Hey" hasBtnStyle={true} />
-	</main>
+<Layout title="SPQ Service consult">
+    <main class="content-container">
+        <section class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">Service. Project. Quality.</h1>
+                <div class="hero__text-container">
+                    <div class="hero__line">
+
+                    </div>
+                    <p class="paragraph hero__text">
+                        We are full-service support provider of devices and tools which are supplied to automotive
+                        companies. The intention is to give our customers the assurance of a quick remedy whenever we are
+                        approached - just like when people call the fire brigade for emergency assistance.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+    </main>
 </Layout>
+
+<style>
+    .hero {
+        margin: 5.875rem 0;
+    }
+
+    .hero__text-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .hero__title {
+        font-size: var(--fs-700);
+        font-weight: var(--fw-bold);
+        letter-spacing: 0.015em;
+    }
+
+    .hero__text {
+        font-size: var(--fs-300);
+        letter-spacing: 0.030em;
+    }
+</style>
+
 

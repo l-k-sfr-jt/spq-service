@@ -27,9 +27,7 @@ const { title } = Astro.props;
 					</ul>
 				</nav>
 			</div>
-
 		</header>
-
 		<slot />
 	</body>
 </html>
@@ -47,7 +45,9 @@ const { title } = Astro.props;
 		--fw-bold: 500;
 		--fw-black: 700;
 
-		--fs-300: 1rem;
+		--fs-100: 1rem;
+		--fs-200: 1.125rem;
+		--fs-300: 1.25rem;
 		--fs-400: 1.5rem;
 		--fs-500: 2.875rem;
 		--fs-600: 4rem;
@@ -66,6 +66,11 @@ const { title } = Astro.props;
 		max-width: 85vw;
 		width: min(90vw, 85rem);
 		margin-inline: auto;
+	}
+
+	.paragraph {
+		font-weight: var(--fw-regular);
+		font-size: var(--fs-200);
 	}
 
 	.header {
