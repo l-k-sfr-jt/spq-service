@@ -53,10 +53,16 @@ const { title } = Astro.props;
 		--fs-600: 4rem;
 		--fs-700: 7.8rem;
 	}
+
+	*, *::before, *::after {
+		box-sizing: border-box;
+	}
+
 	* {
 		margin: 0;
 	}
 	body {
+		-webkit-font-smoothing: antialiased;
 		background: var(--clr-background);
 		color: var(--clr-text);
 		font-family: var(--ff-base);
