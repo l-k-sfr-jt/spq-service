@@ -1,10 +1,10 @@
 ---
 interface Props {
     text: string;
-    hasBtnStyle: boolean
+    hasBtnStyle?: boolean
 }
 
-const { text, hasBtnStyle}= Astro.props;
+const { text, hasBtnStyle = false}= Astro.props;
 ---
 
 <a class=`link ${hasBtnStyle && 'link-btn'}`>{text}</a>
