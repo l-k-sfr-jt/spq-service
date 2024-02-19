@@ -13,16 +13,17 @@ import Layout from '../layouts/Layout.astro';
                     </div>
                     <p class="paragraph hero__text">
                         We are full-service support provider of devices and tools which are supplied to automotive
-                        companies. The intention is to give our customers the assurance of a quick remedy whenever we are
-                        approached - just like when people call the fire brigade for emergency assistance.
+                        companies. The intention is to give our customers the assurance of a quick remedy whenever we
+                        are approached - just like when people call the fire brigade for emergency assistance.
                     </p>
                 </div>
             </div>
         </section>
         <section class="about">
-            <h2>About the company</h2>
-            <p>We build on our previous experiences</p>
-            <p>Czech company established in 2018 on the base more than 25 years of knowledge in the automotive business in the scope of project management and mass production of interiors parts.</p>
+            <h2 class="heading-secondary">About the company</h2>
+            <p class="subheading-secondary">We build on our previous experiences —</p>
+            <p class="paragraph">Czech company established in 2018 on the base more than 25 years of knowledge in the automotive business
+                in the scope of project management and mass production of interiors parts.</p>
         </section>
         <section class="stats-section">
             <div class="stats">
@@ -54,10 +55,12 @@ import Layout from '../layouts/Layout.astro';
 
         </section>
         <section class="services-section">
-            <h2>Our services</h2>
-            <p>We are providing —</p>
+            <h2 class="heading-secondary">Our services</h2>
+            <p class="subheading-secondary">We are providing —</p>
             <div class="services">
+                <div class="service">
 
+                </div>
             </div>
         </section>
     </main>
@@ -67,6 +70,7 @@ import Layout from '../layouts/Layout.astro';
     .hero {
         padding: 5.875rem 0 0 0;
         height: calc(100svh - 7.5rem);
+        overflow: hidden;
     }
 
     .hero__text-container {
@@ -77,6 +81,7 @@ import Layout from '../layouts/Layout.astro';
     .hero__title {
         font-size: var(--fs-700);
         font-weight: var(--fw-bold);
+        font-family: var(--ff-accent);
         letter-spacing: 0.015em;
         margin-bottom: 5.5rem;
     }
@@ -93,9 +98,9 @@ import Layout from '../layouts/Layout.astro';
         text-transform: uppercase;
         display: flex;
         gap: 1.25rem;
-        width: 80%;
+        width: 100%;
         align-items: center;
-        transform: translate(-80%, -50%) rotate(270deg);
+        transform: translate(-70%, -50%) rotate(270deg);
         transform-origin: right;
     }
 
@@ -109,12 +114,64 @@ import Layout from '../layouts/Layout.astro';
     .hero__text {
         font-size: var(--fs-300);
         letter-spacing: 0.030em;
+        line-height: 1.5;
         flex: 0 1 50%
     }
 
-
     .about {
         padding: 6rem 0;
+    }
+
+    .heading-secondary {
+        font-family: var(--ff-accent);
+        font-weight: var(--fw-black);
+        font-size: var(--fs-600);
+        margin-bottom: .5rem;
+    }
+
+    .subheading-secondary {
+        font-size: var(--fs-400);
+        margin-bottom: 5rem;
+    }
+
+    .paragraph {
+        font-size: var(--fs-200);
+        letter-spacing: 0.03em;
+        max-width: 60ch;
+    }
+
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 6rem;
+        margin-bottom: 14.5rem;
+
+    }
+
+    .stat > h3 {
+        text-transform: uppercase;
+        font-weight: var(--fw-regular);
+        letter-spacing: 0.03em;
+        font-size: var(--fs-200);
+        display: flex;
+        gap: 1.25rem;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .stat > h3::before {
+        content: "";
+        height: 1.25rem;
+        width: 1.25rem;
+        display: block;
+        background-color: var(--clr-secondary);
+        border-radius: 50%;
+    }
+
+    .stat > p {
+        font-size: var(--fs-600);
+        font-family: var(--ff-accent);
+        font-weight: var(--fw-black);
     }
 
 </style>

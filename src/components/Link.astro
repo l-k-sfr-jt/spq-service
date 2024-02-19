@@ -1,12 +1,13 @@
 ---
 interface Props {
     text: string;
+    hasBtnStyle: boolean
 }
 
 const { text, hasBtnStyle}= Astro.props;
 ---
 
-{hasBtnStyle ? <a class="link link-btn">{text}</a> :  <a class="link">{text}</a> }
+<a class=`link ${hasBtnStyle && 'link-btn'}`>{text}</a>
 
 <style>
     .link, .link:visited {

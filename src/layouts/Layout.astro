@@ -15,6 +15,9 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Questrial&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		<title>{title}</title>
 	</head>
 	<body>
@@ -23,7 +26,7 @@ const { title } = Astro.props;
 				<a aria-label="Homepage"><img src="/logo.svg" alt="" height="37" width="60"></a>
 				<nav class="site-nav">
 					<ul class="nav-list" aria-label="Main">
-						{["Home", "About", "Our services", "References", "Home", "Careers"].map(item =>  <li class="nav-item"><Link text={item}/></li>)}
+						{["Home", "About", "Our services", "References", "Contact us", "Careers"].map(item =>  <li class="nav-item"><Link text={item}/></li>)}
 					</ul>
 				</nav>
 			</div>
@@ -37,8 +40,8 @@ const { title } = Astro.props;
 		--clr-background: #080808;
 		--clr-secondary: #D9323B;
 
-		--ff-base: "IBM Plex Sans", sans-serif;
-		--ff-accent: "Young Serif", serif;
+		--ff-base: "Questrial", sans-serif;
+		--ff-accent: "Work Sans", sans-serif;
 
 		--fw-regular: 300;
 		--fw-nav: 400;
@@ -66,6 +69,8 @@ const { title } = Astro.props;
 		background: var(--clr-background);
 		color: var(--clr-text);
 		font-family: var(--ff-base);
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 	}
 
 	.content-container {
